@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 1</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2>Завдання 1</h2>
+    <a href="index.html">🔙 Повернутися до списку завдань</a>
+    <script>
+        let lastName = prompt("Введіть прізвище:", "");
+        let firstName = prompt("Введіть ім'я:", "");
+        let middleName = prompt("Введіть по-батькові:", "");
+
+        if (lastName && firstName && middleName) {
+            let confirmData = confirm(`Перевірте правильність даних:\n${lastName} ${firstName} ${middleName}\nПідтверджуєте?`);
+            if (confirmData) {
+                alert(`Вітаю, ${lastName} ${firstName} ${middleName}! Дані успішно збережено.`);
+            } else {
+                alert("Помилка: Реєстрацію скасовано користувачем.");
+            }
+        } else {
+            alert("Помилка: Необхідно заповнити всі поля форми.");
+        }
+    </script>
+</body>
+</html>
